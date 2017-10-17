@@ -26,7 +26,7 @@ function fish_prompt
   set -l directory_color  (set_color $fish_color_quote ^/dev/null; or set_color brown)
   set -l repository_color (set_color $fish_color_cwd ^/dev/null; or set_color green)
 
-  if set -q $SSH_CLIENT
+  if set -q SSH_CLIENT
     echo -n -s (hostname -s) " "
   end
 
