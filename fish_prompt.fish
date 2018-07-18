@@ -36,7 +36,7 @@ function fish_prompt
     echo -n -s $error_color $lambda $normal_color
   end
 
-  if git_is_repo
+  if git_is_repo; and not test -e .fish-gitignore
     if test "$theme_short_path" = 'yes'
       set root_folder (command git rev-parse --show-toplevel ^/dev/null)
       set parent_root_folder (dirname $root_folder)
